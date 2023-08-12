@@ -21,3 +21,35 @@
         February has 29 days
 
 */
+
+
+#include<stdio.h>
+
+int main(){
+
+    int ip;
+
+    printf("Year(s) :\n");
+    scanf("%d" , &ip);
+
+    printf("Output :\n");
+
+    if (ip %4 == 1)
+    {
+        printf("February has 28 days");
+    }
+    else if (ip %4 == 0 && ip %100 == 0 && ip %400 ==1)
+    {
+        printf("February has 28 days");
+    }
+    else if (ip %4 == 0 && ip %100 == 1)
+    {
+        printf("February has 29 days");
+    }
+    else if (ip %4 == 0 && ip %400 == 0)
+    {
+        printf("February has 29 days");
+    }
+
+    return 0 ; 
+}
